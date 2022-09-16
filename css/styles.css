@@ -9,7 +9,9 @@
   --footer-bg-color: #2f303a;
   --nav-border-color: #ececec;
   --item-border-color: #eeeeee;
-  --bg-icon: #F5F4FA;
+  --bg-icon: #f5f4fa;
+  --icon-color: #afb1b8;
+  --icon-foot-color: #43444d;
 
   --font-w-500: 500;
   --font-w-700: 700;
@@ -169,7 +171,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/Hero-img.jpg');
+    url('../images/Hero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -337,23 +339,128 @@ p {
 
 .team-item .text {
   padding: 0 5px; /* за макетом цього паддінгу немає, але ж він тут проситься про всяк випадок */
+  margin-bottom: 16px;
 
   font-size: var(--font-sz-16);
   line-height: 1.19;
   color: var(--light-text-color);
 }
 
+.team-item .social-list {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.team-item .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  fill: var(--icon-color);
+}
+
+.team-item .social-link:hover,
+.team-item .social-link:focus {
+  fill: var(--white-color);
+}
+
+.team-item .social-link:hover,
+.team-item .social-link:focus {
+  background-color: var(--accent-blue-color);
+}
+
 /* Regular clients */
 
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
 
+.clients-item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+}
+
+.clients-item .link {
+  display: block;
+  padding: 16px 32px;
+}
+
+.icon-clients {
+  fill: var(--icon-color);
+}
+
+.clients-item:hover .icon-clients,
+.clients-item:focus .icon-clients {
+  fill: var(--accent-blue-color);
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  border-color: var(--accent-blue-color);
+}
 
 /* footer  */
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
   background-color: var(--footer-bg-color);
+}
+
+.footer .container {
+  display: flex;
+}
+
+.footer-address {
+  padding-top: 60px;
+  margin-right: 70px;
+  width: 231px;
+  height: 252px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 72px;
+  width: 206px;
+  height: 252px;
+}
+
+.footer-social .title {
+  margin-bottom: 20px;
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+}
+
+.footer-social .social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  fill: var(--white-color);
+  background-color: var(--icon-foot-color);
+}
+
+.footer-social .social-link:hover,
+.footer-social .social-link:focus {
+  background-color: var(--accent-blue-color);
 }
 
 .footer .logo {
