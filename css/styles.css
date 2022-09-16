@@ -383,7 +383,7 @@ p {
 
 .clients-item {
   width: 170px;
-  height: 92px;
+  min-height: 92px;
   border: 1px solid var(--icon-color);
 }
 
@@ -393,11 +393,12 @@ p {
 }
 
 .icon-clients {
+  display: block;
   fill: var(--icon-color);
 }
 
-.clients-item:hover .icon-clients,
-.clients-item:focus .icon-clients {
+.clients-item .link:hover .icon-clients,
+.clients-item .link:focus .icon-clients {
   fill: var(--accent-blue-color);
 }
 
